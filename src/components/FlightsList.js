@@ -11,9 +11,23 @@ class FlightsList extends Component {
             
         } )
         return(
-            <div>
-            <p>{flightsNodes}</p>
-            </div>
+            
+            <table>{flightsNodes}
+            <thead>
+                    <tr>
+                        <th> Airline </th>
+                        <th> Flight No </th>
+                        <th> Date </th>
+                        <th> Scheduled </th>
+                        <th> Arr/Dep </th>
+                        <th> Origin/Destination Airport </th>
+                        <th> Status </th>
+                        <th> Other Info </th>
+                        <th> Additional Info </th>
+                    </tr>
+                </thead>
+            </table>
+    
 
         )
     }

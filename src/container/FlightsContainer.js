@@ -10,13 +10,15 @@ class FlightsContainer extends Component {
             flights: []
         }
     }
+    
 
     componentDidMount() {
-        fetch('https://kabrudle.edinburghairport.com/api/flights/all')
-            .then(res => res.json())
-            .then(data => this.setState({flights: data }))
-            .catch(err => console.error)
-
+        setInterval(() => {
+            fetch('https://kabrudle.edinburghairport.com/api/flights/all')
+                .then(res => res.json())
+                .then(data => this.setState({flights: data }))
+                .catch(err => console.error)
+        }, 3000); console.log("test")
     }
 
     render(){ 
@@ -28,3 +30,7 @@ class FlightsContainer extends Component {
 }
 
 export default FlightsContainer
+
+
+        
+        
