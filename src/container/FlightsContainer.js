@@ -21,7 +21,7 @@ class FlightsContainer extends Component {
 
     render(){ 
         return(
-            < FlightsList />
+            < FlightsList flights={this.state.flights} />
         )
     }
 
