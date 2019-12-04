@@ -1,7 +1,6 @@
 import React, { Component } from 'react'; 
 import FlightsList from '../components/FlightsList'
 
-
 class FlightsContainer extends Component {
 
     constructor (props) {
@@ -11,14 +10,13 @@ class FlightsContainer extends Component {
         }
     }
     
-
     componentDidMount() {
         setInterval(() => {
             fetch('https://kabrudle.edinburghairport.com/api/flights/all')
                 .then(res => res.json())
                 .then(data => this.setState({flights: data }))
                 .catch(err => console.error)
-        }, 3000); console.log("test")
+        }, 6000);
     }
 
     render(){ 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './FlightsDetail.css'
 
 class FlightsDetail extends Component {
 
